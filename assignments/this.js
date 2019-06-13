@@ -14,12 +14,12 @@
 // code example for Window Binding
 const myObject = {
     bestcar: "Camaro", 
-    speak: function() {
+    sayName: function() {
         console.log(this); 
         return this.bestcar + " " + "best car ever"; 
     }
 }; 
-myObject.speak();  
+myObject.sayName();  
 
 // Principle 2
 
@@ -55,17 +55,14 @@ Sam.speak();
 
 // code example for Explicit Binding
 
-function EventGreeters(greetername) {
-    this.nameis = "Hello, my name is"; 
-    this.speech = "Welcome, to coca cola annual event ";
-    this.greetername = greetername; 
-    this.speak = function() {
-        console.log(this.nameis + " " + this.greetername + " " + this.speech); 
-        console.log(this); 
-    }; 
-}
-const Bob = new EventGreeters("Bob"); 
-const Sam = new EventGreeters("Sam")
+let sayName = function() {
+    console.log("My name is" + " " + this.name + " " + "I am" + " " + this.age + " " + "years old."); 
+}; 
 
-Bob.speak(); 
-Sam.speak();
+const personsName = {
+    name: "Noah Franco!",
+    age: 20
+    
+}; 
+
+sayName.call(personsName); 
