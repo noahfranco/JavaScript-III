@@ -1,10 +1,14 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. Global Binding 
-* 2. Implicit Binding   
+* 1. Window Binding 
+//If no other binding rules apply the “.this" keyword is going to default to the window object 
+* 2. Implicit Binding  
+//  When you call a function and the function is invoked look to the left if the dot (“.”)  and that’s what the keyword is going to reference
 * 3. New Binding 
+//  is whenever you have a function invoked with the new keyword 
 * 4. Exolicit Binding 
+//  is when a function is in the global scope 
 *
 * write out a code example of each explanation above
 */
